@@ -1,0 +1,45 @@
+/* card styling  */
+
+/* Positioning the image on the card and adding radius and other styling*/
+
+h2 { 
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: white 0px 0px 10px;
+}
+
+.card { 
+  border-style: none;
+  background-color: #A0C878;
+  text-decoration:none;
+}
+
+
+.card-header {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-header:first-child {
+  background-color: #A0C878;
+  border-style: none;
+  background-color: linear-gradient(#A0C878, #DDEB9D);
+}
+
+.card-header img {
+  height: 200px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+.card p {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  width: 10%;
+}
+

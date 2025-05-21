@@ -6,9 +6,14 @@
     font-style: normal;
 }
 
+.carousel-img {
+   max-width:640px;
+   max-height:360px;
+ }
+
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
-    background-color: beige !important;
+    background-color: #DDEB9D !important;
 }
 
 .nav-item {

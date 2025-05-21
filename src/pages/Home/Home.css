@@ -1,0 +1,19 @@
+.carousel {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-family: "Caveat", cursive;
+    /* font-optical-sizing: auto; */
+    font-size:x-large;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: white 0px 0px 2px;
+}
+
+.button { 
+    padding-top:20px;
+    padding-bottom:20px;
+}
