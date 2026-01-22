@@ -11,6 +11,40 @@
    max-height:360px;
  }
 
+ @media screen and (max-width: 535px) {
+  /* CSS rules to apply when the condition is true */
+  .carousel-img {
+   max-width:400px;
+   max-height:360px;
+ }
+}
+
+
+ @media screen and (max-width: 460px) {
+  /* CSS rules to apply when the condition is true */
+  .carousel-img {
+   max-width:350px;
+   max-height:360px;
+ }
+}
+
+ @media screen and (max-width: 391px) {
+  /* CSS rules to apply when the condition is true */
+  .carousel-img {
+   max-width:300px;
+   max-height:360px;
+ }
+}
+
+
+ @media screen and (max-width: 376px) {
+  /* CSS rules to apply when the condition is true */
+  .carousel-img {
+   max-width:250px;
+   max-height:360px;
+ }
+}
+
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
     background-color: #DDEB9D !important;

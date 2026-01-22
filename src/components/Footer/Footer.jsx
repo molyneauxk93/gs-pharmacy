@@ -14,7 +14,7 @@ function Footer() {
 
         <div className="card-section">
 
-            <section className="card">
+            <section className="insta-card">
 
                 <div className="card-header">
                     <a href="https://www.instagram.com/greatgeorgestreetrx/" target="_blank">

@@ -1,0 +1,28 @@
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  /* height: 100vh;           Ensures container takes up full viewport height */
+}
+
+.card {
+  /* Your card styles (width, padding, border, etc.) */
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius:20px;
+  margin:30px;
+  background-color: #DDEB9D ;
+  text-decoration:none;
+}
+
+
+
+.card-text {
+    display:flex;
+}
+
+/* .card-title {
+
+} */
