@@ -3,6 +3,8 @@ import './Store.css'
 
 import Products from '../../components/Products/Products'
 
+import Product from '../../pages/Product/Product'
+
 function Store() {
 
     const products = [
@@ -88,9 +90,16 @@ function Store() {
 
     return (
         <div>
-             {
+            {products.map(items => (
+                <div>
+                    <Products data={items} />
+                    <Product data={items} />
+                </div>
+            ))}
+
+             {/* {
                 products.map((items) => <Products data={items} />)
-            }
+            } */}
         </div>
     )
 }

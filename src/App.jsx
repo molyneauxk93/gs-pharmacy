@@ -13,6 +13,7 @@ import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
 import Store from './pages/Store/Store.jsx'
 import Contact from './pages/Contact/Contact.jsx'
+import Product from './pages/Product/Product.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +28,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/store" element={<Store />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/product/:id" element={<Product />} />
           </Routes>
         </BrowserRouter>
         <Footer />

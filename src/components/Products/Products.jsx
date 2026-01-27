@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useCart } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 import './Products.css'
 
 //import boostrap card component 
@@ -8,7 +8,6 @@ import Card from 'react-bootstrap/Card';
 
 function Products(props) {
 
-        const { addToCart } = useCart()
 
         return (
             <div className="card-container">
@@ -19,7 +18,7 @@ function Products(props) {
                         <Card.Text className="card-text">
                             {props.data.description}
                         </Card.Text>
-                        <Button variant="primary" onClick={() => addToCart(props)}>Add to Cart</Button>
+                        <Link to={`/product/${props.data.id}`}><Button variant="primary">Add to Cart</Button></Link>
                     </Card.Body>
                 </Card>
             </div>
