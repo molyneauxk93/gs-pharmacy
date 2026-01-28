@@ -3,7 +3,7 @@ import './Store.css'
 
 import Products from '../../components/Products/Products'
 
-import Product from '../../pages/Product/Product'
+import Product from '../../components/Product/Product'
 
 function Store() {
 
@@ -93,13 +93,8 @@ function Store() {
             {products.map(items => (
                 <div>
                     <Products data={items} />
-                    <Product data={items} />
                 </div>
             ))}
-
-             {/* {
-                products.map((items) => <Products data={items} />)
-            } */}
         </div>
     )
 }

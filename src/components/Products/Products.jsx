@@ -8,7 +8,6 @@ import Card from 'react-bootstrap/Card';
 
 function Products(props) {
 
-
         return (
             <div className="card-container">
                 <Card style={{ width: '18rem' }}>
@@ -18,7 +17,7 @@ function Products(props) {
                         <Card.Text className="card-text">
                             {props.data.description}
                         </Card.Text>
-                        <Link to={`/product/${props.data.id}`}><Button variant="primary">Add to Cart</Button></Link>
+                        <Link to={`/product/${props.data.id}`}><Button variant="primary">View Item</Button></Link>
                     </Card.Body>
                 </Card>
             </div>
