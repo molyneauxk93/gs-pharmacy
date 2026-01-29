@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Product from './components/Product/Product.jsx'
+import Cart from './components/Cart/Cart.jsx'
 
 //importing pages 
 import Home from './pages/Home/Home.jsx'
@@ -29,6 +30,7 @@ function App() {
             <Route path="/store" element={<Store />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:id" element={<Product/>} />
+            <Route path="/cart" element={<Cart/>} />
           </Routes>
         </BrowserRouter>
         <Footer />

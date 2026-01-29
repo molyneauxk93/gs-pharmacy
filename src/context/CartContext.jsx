@@ -31,11 +31,39 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     setCartItems((prevItems) => prevItems.filter((i) => i.id !== id));
   };
+
+  // Function to update the quantity
+  const increaseQuantity = (item) => {
+    setCartItems((prevItems) => {
+    const existingItem = prevItems.find((i) =>i.id === item.id);
+
+    if(existingItem) {
+        return prevItems.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+        );
+    }
+  });
+
+  };
   
+  // Function to decrease the quantity
+  const decreaseQuantity = (item) => {
+    setCartItems((prevItems) => {
+    const existingItem = prevItems.find((i) =>i.id === item.id);
+
+    if(existingItem) {
+        return prevItems.map((i) =>
+          i.id === item.id && i.quantity > 0 ? { ...i, quantity: i.quantity - 1 } : i
+        );
+    }
+  });
+
+  };
+
   // You can also add functions for increasing/decreasing quantity, clearing the cart, etc.
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, increaseQuantity, decreaseQuantity}}>
       {children}
     </CartContext.Provider>
   );

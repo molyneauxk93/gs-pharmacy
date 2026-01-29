@@ -20,9 +20,10 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <Nav.Link href="/"><span className="nav-item">Home</span></Nav.Link>
-                            <Nav.Link href="/about"><span className="nav-item">About</span></Nav.Link>
+                            {/* <Nav.Link href="/about"><span className="nav-item">About</span></Nav.Link> */}
                             <Nav.Link href="/store"><span className="nav-item">Store</span></Nav.Link>
                             <Nav.Link href="/contact"><span className="nav-item">Contact Us</span></Nav.Link>
+                            <Nav.Link href="/cart"><span className="nav-item">MyCart</span></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
