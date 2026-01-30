@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Home.css'
 
 // bootstrap imports 
@@ -24,7 +25,7 @@ function Home() {
                 With this in mind, our goal is to bring you the same service we provide to our customers in-person to our 
                 online services.</p>
 
-                <div className="button"><Button style={{color:"#DDEB9D"}} size="lg" variant="success">View Products</Button></div>
+                <div className="button"> <Link to={`/store`}><Button style={{color:"#DDEB9D"}} size="lg" variant="success">View Products</Button></Link></div>
         </div>
     )
 }

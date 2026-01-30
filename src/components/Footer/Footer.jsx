@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Footer() {
     return (
-          <div>
+        <div className="footer">
         {/* Beginning of Footer section */ }
         < hr class="solid" ></hr >
         <h2>Follow Us on Instagram!</h2>

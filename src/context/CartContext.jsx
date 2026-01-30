@@ -25,6 +25,7 @@ export const CartProvider = ({ children }) => {
       }
       return [...prevItems, { ...item, quantity: 1 }];
     });
+    alert("Item has been added to Cart.");
   };
 
   // Function to remove an item from the cart

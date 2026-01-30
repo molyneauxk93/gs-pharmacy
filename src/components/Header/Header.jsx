@@ -1,10 +1,12 @@
 import './Header.css'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import { useCart } from '../../context/CartContext'
 
 
 function Header() {
+    const { cartItems } = useCart();
     return (
         <div className="caveat-header">
             <Navbar expand="lg" className="bg-body-tertiary">
@@ -23,7 +25,7 @@ function Header() {
                             {/* <Nav.Link href="/about"><span className="nav-item">About</span></Nav.Link> */}
                             <Nav.Link href="/store"><span className="nav-item">Store</span></Nav.Link>
                             <Nav.Link href="/contact"><span className="nav-item">Contact Us</span></Nav.Link>
-                            <Nav.Link href="/cart"><span className="nav-item">MyCart</span></Nav.Link>
+                            <Nav.Link href="/cart"><span className="nav-item">MyCart({cartItems.length})</span></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -23,6 +23,10 @@
     display:flex;
 }
 
-/* .card-title {
+.scroll-box {
+  height:560px; /* Specifies a fixed height */
+  overflow-y: auto; /* Adds vertical scrollbar if content overflows */
+  border:none;
+  padding: 10px;
+}
 
-} */

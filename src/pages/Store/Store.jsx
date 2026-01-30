@@ -89,7 +89,7 @@ function Store() {
     ]
 
     return (
-        <div>
+        <div className="scroll-box">
             {products.map(items => (
                 <div>
                     <Products data={items} />
