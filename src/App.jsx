@@ -15,6 +15,7 @@ import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
 import Store from './pages/Store/Store.jsx'
 import Contact from './pages/Contact/Contact.jsx'
+import CompleteOrder from './pages/CompleteOrder/CompleteOrder.jsx'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:id" element={<Product/>} />
             <Route path="/cart" element={<Cart/>} />
+            <Route path="/order" element={<CompleteOrder/>} />
           </Routes>
           <Footer />
         </BrowserRouter>

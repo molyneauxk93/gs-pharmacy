@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from '../../context/CartContext';
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
@@ -22,7 +23,7 @@ const Cart = () => {
           ))}
         </ul>
       )}
-      <button>Complete Order</button>
+      <Link to={`/order`}><button>Complete Order</button></Link>
     </div>
   );
 };
