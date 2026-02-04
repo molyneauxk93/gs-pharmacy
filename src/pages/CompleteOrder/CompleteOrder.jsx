@@ -11,7 +11,7 @@ function CompleteOrder() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_8ijs1di', 'template_pl2zfso', form.current, '86jr_XCmOBBjYJrfl')
+        emailjs.sendForm('service_4z2pn5c', 'template_ltka6h6', form.current, '86jr_XCmOBBjYJrfl')
             .then((result) => {
                 console.log(result.text);
                 window.location.reload();
@@ -33,11 +33,11 @@ function CompleteOrder() {
                     {cartItems.length === 0 ? (
                         <p>Your cart is empty.</p>
                     ) : (
-                        <ul>
+                        <ul name="list_items">
                             {cartItems.map((item) => (
                                 <li key={item.id}>
-                                    {item.title}
-                                    <input type="number" value={item.quantity} readOnly></input>
+                                    <label>{item.title}   x</label>
+                                    <label type="number">{item.quantity}</label>
                                 </li>
                             ))}
                         </ul>
