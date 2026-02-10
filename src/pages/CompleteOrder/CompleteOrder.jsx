@@ -7,11 +7,29 @@ function CompleteOrder() {
 
      const form = useRef();
 
+     const formatEmailData = (items) => {
+        let htmlString = "<ul>";
+        items.forEach(item => {
+            htmlString += `<li>${JSON.stringify(item.title)} (Qty: ${item.quantity}) </li>`
+        });
+        htmlString += '</ul>';
+        return htmlString;
+     }
+
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_4z2pn5c', 'template_ltka6h6', form.current, '86jr_XCmOBBjYJrfl')
+        const formattedItems = formatEmailData(cartItems);
+
+        const templateParams = {
+            user_name: `${document.forms.myForm.first_name.value}`,
+            user_last_name: `${document.forms.myForm.last_name.value}`,
+            user_email: `${document.forms.myForm.email.value}`,
+            items_list: formattedItems
+        };
+
+        emailjs.send('service_4z2pn5c', 'template_ltka6h6', templateParams, '86jr_XCmOBBjYJrfl')
             .then((result) => {
                 console.log(result.text);
                 window.location.reload();
@@ -22,10 +40,10 @@ function CompleteOrder() {
 
     };
 
-    const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
+    const { cartItems } = useCart();
 
     return (
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} id="myForm">
             <div>
                 <p>Here is your order summary, please complete the form and submit your order.</p>
 
@@ -33,14 +51,15 @@ function CompleteOrder() {
                     {cartItems.length === 0 ? (
                         <p>Your cart is empty.</p>
                     ) : (
-                        <ul name="list_items">
+                        <div>
                             {cartItems.map((item) => (
-                                <li key={item.id}>
-                                    <label>{item.title}   x</label>
-                                    <label type="number">{item.quantity}</label>
-                                </li>
+                                // <li key={item.id}>
+                                //     <label>{item.title}   x</label>
+                                //     <label type="number">{item.quantity}</label>
+                                // </li>
+                                <p name="list_items">* {item.title}   x{item.quantity}</p>
                             ))}
-                        </ul>
+                        </div>
                     )}
                 </div>
 
